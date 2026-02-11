@@ -1,10 +1,10 @@
 {
-  "logo": "/logo.webp",
+  "logo": null,
+  "title": "مطابع لازورد",
   "nav": [
     { "label": "الرئيسية", "href": "#hero" },
     { "label": "خدمات الطباعة", "href": "#services" },
     { "label": "معرض الأعمال", "href": "#portfolio" },
-    { "label": "المدونة", "href": "#blog" },
     { "label": "اتصل بنا", "href": "#contact" }
   ]
 }
