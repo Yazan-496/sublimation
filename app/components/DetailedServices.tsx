@@ -29,8 +29,8 @@ export default function DetailedServices() {
                                     {service.description}
                                 </p>
                             </div>
-                            <div className="w-full overflow-x-auto pb-6 snap-x snap-mandatory px-4 md:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-                                <div className="flex gap-6 w-fit mx-auto">
+                            <div className="w-full overflow-x-auto pb-6 snap-x snap-mandatory md:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                                <div className="flex gap-2 md:gap-6 w-fit mx-auto">
                                     {service.images.map((image, imgIndex) => (
                                         <div
                                             key={imgIndex}
