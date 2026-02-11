@@ -5,8 +5,8 @@ export default function Services() {
     const { services } = data;
 
     return (
-        <section id="services" className="py-12 bg-gray-50 dark:bg-zinc-900">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="services" className="pt-8 bg-gray-50 dark:bg-zinc-900">
+            <div className=" mx-auto text-center px-4 sm:px-6 lg:px-8">
                 <div className="lg:text-center">
                     <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">
                         خدماتنا
@@ -19,31 +19,40 @@ export default function Services() {
                     </p>
                 </div>
 
-                <div className="mt-10 px-4">
-                    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="w-full overflow-x-auto mt-5 pb-0 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                    <div className="flex gap-4 px-5 md:px-0 w-max md:w-fit md:mx-auto">
                         {services.items.map((service, index) => (
                             <div
                                 key={index}
-                                className="flex flex-col bg-white dark:bg-black rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-[1.02] border border-gray-100 dark:border-zinc-800"
+                                className="h-full max-h-[500px] shrink-0 w-72 sm:w-80 flex flex-col bg-white dark:bg-black rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-[1.02] border border-gray-100 dark:border-zinc-800 snap-center"
                             >
-                                <div className="h-48 w-full relative overflow-hidden bg-gray-200 dark:bg-zinc-800">
+                                <div className="p-4 text-center">
+                                    <h3 className="text-lg leading-6 font-bold text-gray-900 dark:text-white">
+                                        {service.title}
+                                    </h3>
+                                </div>
+
+                                <div className="h-78 w-full relative overflow-hidden bg-gray-200 dark:bg-zinc-800">
                                     <ImagePreview
                                         src={service.image}
-                                        alt={service.title}
+                                        alt={''}
                                         fill
-                                        className="object-center"
+                                        className="object-cover h-full"
                                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                                         quality={60}
                                     />
                                 </div>
 
-                                <div className="p-6 text-center">
-                                    <h3 className="text-lg leading-6 font-bold text-gray-900 dark:text-white">
-                                        {service.title}
-                                    </h3>
-                                    <p className="mt-2 text-sm text-gray-500 dark:text-gray-400 line-clamp-3">
+                                <div className="p-4 h-auto text-center grow">
+                                    <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-3">
                                         {service.description}
                                     </p>
+                                </div>
+
+                                <div className="pb-4 flex justify-center">
+                                    <div className="flex items-center justify-center w-8 h-8 rounded-full dark:text-white text-black text-sm font-bold shadow-sm">
+                                        {index + 1}
+                                    </div>
                                 </div>
                             </div>
                         ))}

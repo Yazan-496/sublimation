@@ -31,7 +31,7 @@ export default function ImagePreview({ src, alt, className, ...rest }: ImagePrev
                 className="shrink-0 overflow-hidden rounded-lg border border-gray-200 bg-white shadow-lg dark:border-zinc-700 dark:bg-zinc-800 snap-center cursor-pointer group"
                 onClick={() => setIsOpen(true)}
             >
-                <div className="relative h-56 w-full overflow-hidden">
+                <div className="relative h-78 w-full overflow-hidden">
                     <Image
                         className={`object-cover transition-transform duration-500 group-hover:scale-110 ${className || ''}`}
                         src={src || ''}

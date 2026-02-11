@@ -33,7 +33,7 @@ export default function About() {
                     ))}
                 </div>
 
-                <div className="mt-20 text-center">
+                {/* <div className="mt-20 text-center">
                     <h3 className="text-2xl font-bold sm:text-3xl">{about.services_title}</h3>
                     <p className="mt-3 text-lg text-gray-600 dark:text-gray-400">
                         {about.services_subtitle}
@@ -41,7 +41,7 @@ export default function About() {
                     <p className="mt-1 text-base text-gray-500 dark:text-gray-300">
                         {about.services_description}
                     </p>
-                </div>
+                </div> */}
             </div>
         </section>
     );
