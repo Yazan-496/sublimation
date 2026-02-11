@@ -19,7 +19,7 @@ export default function WhatsAppButton() {
             href={contact.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="fixed bottom-8 left-8 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-2xl transition-all duration-300 hover:scale-110 animate-bounce hover:animate-none"
+            className="fixed bottom-8 left-8 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-green-500 text-white shadow-2xl transition-all duration-300 hover:scale-110 animate-bounce hover:animate-none"
             aria-label="تواصل معنا عبر واتساب"
         >
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-20"></span>
