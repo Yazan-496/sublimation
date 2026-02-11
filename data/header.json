@@ -1,5 +1,5 @@
 {
-  "logo": null,
+  "logo": "/images/logo.jpeg",
   "title": "مطابع لازورد",
   "nav": [
     { "label": "الرئيسية", "href": "#hero" },
