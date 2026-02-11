@@ -22,7 +22,7 @@ export default function WhatsAppButton() {
             className="fixed bottom-8 left-8 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-green-500 text-white shadow-2xl transition-all duration-300 hover:scale-110 animate-bounce hover:animate-none"
             aria-label="تواصل معنا عبر واتساب"
         >
-            <span className="absolute inline-flex h-full w-full animate-ping hover:animate-none rounded-full bg-green-400 opacity-20"></span>
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-20"></span>
 
             <WhatsAppIcon />
         </a>
