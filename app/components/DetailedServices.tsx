@@ -44,9 +44,9 @@ export default function DetailedServices() {
                                                     className="object-cover"
                                                 />
                                             </div>
-                                            <p className="p-3 text-center text-sm text-gray-600 dark:text-gray-300">
+                                            {/* <p className="p-3 text-center text-sm text-gray-600 dark:text-gray-300">
                                                 {image.alt}
-                                            </p>
+                                            </p> */}
                                         </div>
                                     ))}
                                 </div>
