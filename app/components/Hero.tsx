@@ -4,15 +4,18 @@ import data from '@/data';
 export default function Hero() {
     const { hero } = data;
     return (
-        <section id="hero" className="relative bg-white px-5 dark:bg-black overflow-hidden">
-            <div className="max-w-7xl mx-auto">
+        <section
+            id="hero"
+            className="relative bg-white px-5 flex flex-col lg:col-2 dark:bg-black overflow-hidden"
+        >
+            <div className="w-full lg:w-1/2">
                 <div className="relative pb-12 bg-white dark:bg-black sm:pb-24 md:pb-32 lg:max-w-2xl lg:w-full lg:pb-40 xl:pb-48">
                     <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 relative z-20">
                         <div className="sm:text-center lg:text-right">
-                            <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
+                            <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-3xl md:text-4xl">
                                 <span className="block xl:inline leading-tight">{hero.title}</span>
                             </h1>
-                            <p className="text-gray-500 dark:text-gray-400 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 mt-4 text-lg whitespace-pre-line">
+                            <p className="text-gray-500 dark:text-gray-400 sm:mt-5 sm:text-md sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 mt-4 text-lg whitespace-pre-line">
                                 {hero.subtitle}
                             </p>
                             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
