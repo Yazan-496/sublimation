@@ -17,7 +17,7 @@ export default function Footer() {
               <a
                 key={index}
                 href={link.href}
-                className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
+                className="text-gray-500 m-1 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
               >
                 {link.label}
               </a>

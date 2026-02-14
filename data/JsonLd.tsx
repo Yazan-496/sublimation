@@ -1,54 +1,47 @@
+// src/components/JsonLd.tsx
 import data from '@/data';
 
-const JsonLd = () => {
-    const jsonLdData = {
+export const businessData = {
+    name: "مطبعة لازورد",
+    description: data.site.description,
+    url: data.site.baseUrl,
+    telephone: "+966572371578",
+    location: "المملكة العربية السعودية - الرياض - حي المنصورة - شارع الفرزدق",
+    geo: {
+        lat: 24.615396,
+        lng: 46.738384
+    },
+    googleMapsUrl: "https://maps.app.goo.gl/UFhxFarVbhGcc1f2A",
+    reviews: [
+        { id: 1, name: "سعد القحطاني", rating: 5, comment: "أفضل مطبعة في الرياض من ناحية الدقة والسرعة." },
+        { id: 2, name: "مؤسسة الإبداع", rating: 5, comment: "تعامل راقي جداً والنتيجة مبهرة دائماً." },
+    ]
+};
+
+export default function JsonLd() {
+    const schema = {
         "@context": "https://schema.org",
         "@type": "PrintShop",
-        "name": "مطبعة رقمية",
-        "alternateName": "مطبعة لازورد",
-        "description": data.site.description || "مطبعة رقمية متخصصة في تقديم خدمات الطباعة في الرياض",
-        "url": data.site.baseUrl || "https://sublimation.vercel.app/",
-        "logo": "https://sublimation.vercel.app/_next/image?url=%2Fimages%2Fhero.webp&w=1000&q=75",
-        "image": "https://sublimation.vercel.app/_next/image?url=%2Fimages%2Fhero.webp&w=3840&q=75",
-        "telephone": "+966572371578",
-        "priceRange": "$$",
+        "name": businessData.name,
+        "description": businessData.description,
+        "telephone": businessData.telephone,
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "حي المنصورة - شارع الفرزدق",
+            "streetAddress": businessData.location,
             "addressLocality": "الرياض",
-            "addressRegion": "منطقة الرياض",
             "addressCountry": "SA"
         },
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 24.615396,
-            "longitude": 46.738384
-        },
-        "hasMap": "https://maps.app.goo.gl/YourLinkHere1",
-        "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-                "Monday", "Tuesday", "Wednesday", "Thursday",
-                "Friday", "Saturday", "Sunday"
-            ],
-            "opens": "00:00",
-            "closes": "23:59"
-        },
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+966572371578",
-            "contactType": "customer service",
-            "areaServed": "SA",
-            "availableLanguage": ["Arabic", "English"]
+            "latitude": businessData.geo.lat,
+            "longitude": businessData.geo.lng
         }
     };
 
     return (
         <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLdData)}}
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
     );
-};
-
-export default JsonLd;
+}
