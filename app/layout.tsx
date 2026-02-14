@@ -5,6 +5,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import data from '@/data';
 import WhatsAppButton from './components/WhatsAppButton';
+import JsonLd from '@/data/JsonLd';
+
 const cairo = Cairo({
     subsets: ['arabic'],
     variable: '--font-cairo',
@@ -78,11 +80,8 @@ export default function RootLayout({
 
     return (
         <html lang="ar" dir="rtl">
-            <head>
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-                />
+            <head title='lazord'>
+                <JsonLd />
             </head>
             <body
                 className={`${cairo.variable} font-sans antialiased flex flex-col min-h-screen bg-white dark:bg-black text-gray-900 dark:text-gray-100`}
