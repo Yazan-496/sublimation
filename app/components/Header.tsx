@@ -9,13 +9,13 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="w-full bg-white dark:bg-zinc-900 shadow-sm sticky top-0 z-50">
+        <header className="w-full sticky top-0 z-50 bg-gradient-to-tr from-[#f3f4f6] via-[#ffffff] to-[#fafafa] dark:from-[#0b0b0b] dark:via-[#22272b] dark:to-[#3a3f44] text-gray-900 dark:text-white rounded-t-xl shadow-xl border-t border-transparent">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20">
                     <div className="shrink-0 flex items-center">
                         <a
                             href="/"
-                            className="relative flex items-center justify-end h-16 min-w-[4rem]"
+                            className="relative flex items-center justify-end h-16 min-w-16"
                         >
                             {header.logo ? (
                                 <div className="relative h-16 w-16">
@@ -28,7 +28,7 @@ export default function Header() {
                                     />
                                 </div>
                             ) : (
-                                <span className="text-xl font-bold whitespace-nowrap dark:text-white">
+                                <span className="text-xl font-bold whitespace-nowrap text-gray-900 dark:text-white">
                                     {header.title}
                                 </span>
                             )}
@@ -39,7 +39,7 @@ export default function Header() {
                             <a
                                 key={index}
                                 href={item.href}
-                                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                                className="text-gray-700 hover:text-blue-600 dark:text-gray-100 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                             >
                                 {item.label}
                             </a>
@@ -49,7 +49,7 @@ export default function Header() {
                     <div className="md:hidden">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 p-2 focus:outline-none"
+                            className=" hover:text-blue-600 p-2 focus:outline-none"
                             aria-label="Toggle menu"
                         >
                             <span className="sr-only">فتح القائمة</span>
@@ -89,13 +89,13 @@ export default function Header() {
 
             {/* Mobile menu */}
             {isOpen && (
-                <div className="md:hidden bg-white dark:bg-zinc-900 border-t border-gray-100 dark:border-zinc-800">
+                <div className="md:hidden border-t border-gray-100 dark:border-zinc-800">
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                         {header.nav.map((item, index) => (
                             <a
                                 key={index}
                                 href={item.href}
-                                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-zinc-800 transition-colors"
+                                className="block px-3 py-2 rounded-md text-base font-medium  hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-zinc-800 transition-colors"
                                 onClick={() => setIsOpen(false)}
                             >
                                 {item.label}
