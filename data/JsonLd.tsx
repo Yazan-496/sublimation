@@ -11,7 +11,7 @@ export const businessData = {
         lat: 24.615396,
         lng: 46.738384,
     },
-    googleMapsUrl: 'https://maps.app.goo.gl/UFhxFarVbhGcc1f2A',
+    googleMapsUrl: 'https://goo.gl/maps/uEYHSwfFSkKRtcS2A?g_st=aw',
     reviews: [
         {
             id: 1,
