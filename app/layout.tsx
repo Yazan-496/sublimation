@@ -60,32 +60,12 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    const jsonLd = {
-        '@context': 'https://schema.org',
-        '@type': 'PrintShop',
-        name: data.site.title,
-        description: data.site.description,
-        image: `${data.site.baseUrl}${data.site.ogImage}`,
-        url: data.site.baseUrl,
-        telephone: data.contact.phone,
-        address: {
-            '@type': 'PostalAddress',
-            streetAddress: 'شارع الملك فهد',
-            addressLocality: 'الرياض',
-            postalCode: '11564',
-            addressCountry: 'SA',
-        },
-        priceRange: '$$',
-    };
-
     return (
         <html lang="ar" dir="rtl">
-            <head title='lazord'>
-                <JsonLd />
-            </head>
             <body
                 className={`${cairo.variable} font-sans antialiased flex flex-col min-h-screen bg-white dark:bg-black text-gray-900 dark:text-gray-100`}
             >
+                <JsonLd />
                 <Header />
                 <main className="grow">{children}</main>
                 <WhatsAppButton />

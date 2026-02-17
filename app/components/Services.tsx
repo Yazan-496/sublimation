@@ -24,7 +24,7 @@ export default function Services() {
                         {services.items.map((service, index) => (
                             <div
                                 key={index}
-                                className="h-full max-h-[500px] shrink-0 w-72 sm:w-80 flex flex-col bg-white dark:bg-black rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-[1.02] border border-gray-100 dark:border-zinc-800 snap-center"
+                                className="h-full max-h-125 shrink-0 w-72 sm:w-80 flex flex-col bg-white dark:bg-black rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-[1.02] border border-gray-100 dark:border-zinc-800 snap-center"
                             >
                                 <div className="p-4 text-center">
                                     <h3 className="text-lg leading-6 font-bold text-gray-900 dark:text-white">
