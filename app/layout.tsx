@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import data from '@/data';
 import WhatsAppButton from './components/WhatsAppButton';
-import JsonLd from '@/data/JsonLd';
+import JsonLd, { businessData } from '@/data/JsonLd';
 
 const cairo = Cairo({
     subsets: ['arabic'],
@@ -26,18 +26,22 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-    title: data.site.title,
-    description: data.site.description,
+    title: {
+        default: businessData.name,
+        template: `%s | ${businessData.siteName}`,
+    },
+    applicationName: businessData.siteName,
+    description: businessData.description,
     keywords: data.site.keywords,
     metadataBase: new URL(data.site.baseUrl),
     alternates: {
         canonical: '/',
     },
     openGraph: {
-        title: data.site.title,
-        description: data.site.description,
+        title: businessData.name,
+        description: businessData.description,
         url: data.site.baseUrl,
-        siteName: data.site.title,
+        siteName: businessData.siteName,
         locale: data.site.locale,
         type: 'website',
         images: [
@@ -45,9 +49,16 @@ export const metadata: Metadata = {
                 url: data.site.ogImage,
                 width: 1200,
                 height: 630,
-                alt: data.site.title,
+                alt: businessData.name,
             },
         ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: businessData.name,
+        description: businessData.description,
+        site: businessData.siteName,
+        images: [data.site.ogImage],
     },
     icons: {
         icon: '/favicon.ico',
