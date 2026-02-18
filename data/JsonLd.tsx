@@ -3,6 +3,7 @@ import data from '@/data';
 
 export const businessData = {
     name: 'مطبعة لازورد',
+    title: 'Lazord Printing',
     description: data.site.description,
     url: data.site.baseUrl,
     telephone: '+966572371578',
@@ -35,6 +36,7 @@ export default function JsonLd() {
         '@context': 'https://schema.org',
         '@type': 'Organization',
         name: businessData.name,
+        title: businessData.title,
         description: businessData.description,
         url: data.site.baseUrl,
         logo: data.site.baseUrl + data.site.ogImage,
@@ -67,6 +69,7 @@ export default function JsonLd() {
         '@type': 'WebSite',
         url: data.site.baseUrl,
         name: businessData.name,
+        title: businessData.title,
         potentialAction: {
             '@type': 'SearchAction',
             target: `${data.site.baseUrl}/?s={search_term_string}`,
@@ -79,6 +82,7 @@ export default function JsonLd() {
         '@type': 'ContactPage',
         url: `${data.site.baseUrl}/#contact`,
         name: `اتصل بنا - ${businessData.name}`,
+        title: `اتصل بنا - ${businessData.title}`,
         mainEntity: {
             '@type': 'ContactPoint',
             telephone: businessData.telephone,
@@ -91,6 +95,7 @@ export default function JsonLd() {
         '@type': 'WebPage',
         url: data.site.baseUrl,
         name: businessData.name,
+        title: businessData.title,
         description: businessData.description,
         image: [data.site.baseUrl + data.site.ogImage],
     };
