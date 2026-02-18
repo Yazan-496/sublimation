@@ -53,6 +53,7 @@ export default function JsonLd() {
             streetAddress: businessData.location,
             addressLocality: 'الرياض',
             addressCountry: 'SA',
+            postalCode: '12692',
         },
         geo: {
             '@type': 'GeoCoordinates',
