@@ -3,6 +3,7 @@ import data from '@/data';
 
 export const businessData = {
     name: 'مطبعة لازورد',
+    fullName: 'مطبعة لازورد - أفضل خدمات طباعة في الرياض',
     siteName: 'Lazord Printing',
     description: data.site.description,
     url: data.site.baseUrl,
@@ -93,7 +94,7 @@ export default function JsonLd() {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
         url: data.site.baseUrl,
-        name: businessData.name,
+        name: businessData.fullName,
         siteName: businessData.siteName,
         description: businessData.description,
         image: [data.site.baseUrl + data.site.ogImage],
