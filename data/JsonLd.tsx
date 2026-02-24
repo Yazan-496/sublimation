@@ -169,6 +169,7 @@ export default function JsonLd() {
             '@type': 'Organization',
             name: businessData.siteName,
             logo: data.site.baseUrl + data.site.logo,
+            url: data.site.baseUrl + data.site.logo,
         },
         publisher: {
             '@type': 'Organization',
