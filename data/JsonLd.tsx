@@ -9,6 +9,8 @@ export const businessData = {
     description: data.site.description,
     url: data.site.baseUrl,
     telephone: '+966572371578',
+    whatsapp: 'https://wa.me/966572371578',
+    phone: 'tel: +966572371578',
     location: 'المملكة العربية السعودية - الرياض - حي المنصورة - شارع الفرزدق',
     geo: {
         lat: 24.61574870574911,
@@ -99,7 +101,7 @@ export default function JsonLd() {
             longitude: businessData.geo.lng,
         },
         hasMap: businessData.googleMapsUrl,
-        sameAs: [data.site.social.twitter, data.site.social.instagram].filter(Boolean),
+        sameAs: [businessData.phone, businessData.whatsapp].filter(Boolean),
     };
 
     const website = {

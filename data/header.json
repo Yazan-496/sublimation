@@ -2,9 +2,10 @@
   "logo": null,
   "title": "مطبعة لازورد",
   "nav": [
-    { "label": "الرئيسية", "href": "#hero" },
-    { "label": "خدمات الطباعة", "href": "#printing-service" },
-    { "label": "معرض الأعمال", "href": "#all-services" },
-    { "label": "اتصل بنا", "href": "#contact-us" }
+    { "label": "الرئيسية", "href": "/" },
+    { "label": "خدمات الطباعة", "href": "/printing-service" },
+    { "label": "معرض الأعمال", "href": "/all-services" },
+    { "label": "اتصل بنا", "href": "/contact-us" },
+    { "label": "واتساب", "href": "/whatsapp" }
   ]
 }

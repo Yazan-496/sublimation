@@ -35,9 +35,12 @@ export default function Contact() {
                                         />
                                     </svg>
                                 </div>
-                                <div className="mr-3 text-lg text-gray-900 dark:text-white">
+                                <a
+                                    href={`tel:${telephone}`}
+                                    className="mr-3 text-lg text-gray-900 dark:text-white"
+                                >
                                     {contact.phone}
-                                </div>
+                                </a>
                             </div>
                             <div className="flex items-center">
                                 <div className="shrink-0">
