@@ -76,6 +76,9 @@ export default function JsonLd() {
         logo: data.site.baseUrl + data.site.logo,
         telephone: businessData.telephone,
         priceRange: '$',
+        parentOrganization: {
+            '@id': `${data.site.baseUrl}#organization`,
+        },
         contactPoint: [
             {
                 '@type': 'ContactPoint',
@@ -99,6 +102,20 @@ export default function JsonLd() {
         },
         hasMap: businessData.googleMapsUrl,
         sameAs: [businessData.phone, businessData.whatsapp].filter(Boolean),
+        aggregateRating: {
+            '@type': 'AggregateRating',
+            ratingValue: '5',
+            ratingCount: businessData.reviews.length,
+        },
+        review: businessData.reviews.map((review) => ({
+            '@type': 'Review',
+            author: { '@type': 'Person', name: review.name },
+            reviewRating: {
+                '@type': 'Rating',
+                ratingValue: review.rating.toString(),
+            },
+            reviewBody: review.comment,
+        })),
     };
 
     const website = {
@@ -133,9 +150,66 @@ export default function JsonLd() {
         image: [data.site.baseUrl + data.site.ogImage],
     };
 
+    const article = {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        '@id': `${data.site.baseUrl}#article`,
+        headline: businessData.fullName,
+        description: businessData.description,
+        image: [data.site.baseUrl + data.site.ogImage],
+        datePublished: new Date().toISOString(),
+        dateModified: new Date().toISOString(),
+        author: {
+            '@type': 'Organization',
+            name: businessData.siteName,
+            logo: data.site.baseUrl + data.site.logo,
+        },
+        publisher: {
+            '@type': 'Organization',
+            name: businessData.siteName,
+            logo: {
+                '@type': 'ImageObject',
+                url: data.site.baseUrl + data.site.logo,
+            },
+        },
+        mainEntityOfPage: data.site.baseUrl,
+    };
+
+    const breadcrumb = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        '@id': `${data.site.baseUrl}#breadcrumb`,
+        itemListElement: [
+            {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'الرئيسية',
+                item: data.site.baseUrl,
+            },
+            {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'خدمات الطباعة',
+                item: `${data.site.baseUrl}/#printing-service`,
+            },
+            {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'معرض الأعمال',
+                item: `${data.site.baseUrl}/#all-services`,
+            },
+            {
+                '@type': 'ListItem',
+                position: 4,
+                name: 'اتصل بنا',
+                item: `${data.site.baseUrl}/#contact-us`,
+            },
+        ],
+    };
+
     const schema = {
         '@context': 'https://schema.org',
-        '@graph': [org, localBusiness, website, contactPage, webPage],
+        '@graph': [org, localBusiness, website, contactPage, webPage, article, breadcrumb],
     };
 
     return (
