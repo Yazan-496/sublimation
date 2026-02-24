@@ -41,7 +41,7 @@ export default function JsonLd() {
         '@type': 'Organization',
         '@id': `${data.site.baseUrl}#organization`,
         name: businessData.siteName,
-        alternatename: businessData.siteName,
+        alternatename: businessData.name,
         description: businessData.description,
         url: data.site.baseUrl,
         logo: {
@@ -74,7 +74,7 @@ export default function JsonLd() {
         '@type': 'LocalBusiness',
         '@id': `${data.site.baseUrl}#localBusiness`,
         name: businessData.siteName,
-        alternatename: businessData.siteName,
+        alternatename: businessData.name,
         description: businessData.description,
         url: data.site.baseUrl,
         image: [data.site.baseUrl + data.site.ogImage],
@@ -134,7 +134,7 @@ export default function JsonLd() {
         '@id': `${data.site.baseUrl}#webSite`,
         url: data.site.baseUrl,
         name: businessData.siteName,
-        alternateName: businessData.siteName,
+        alternateName: businessData.name,
         publisher: {
             '@id': `${data.site.baseUrl}#organization`,
         },
