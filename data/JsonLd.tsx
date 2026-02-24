@@ -1,7 +1,5 @@
 import Script from 'next/script';
 import data from '@/data';
-import { log } from 'console';
-import { url } from 'inspector';
 
 const mapId = 'a3NvHM2v1nBf1Qjj9'; // uEYHSwfFSkKRtcS2A
 export const businessData = {
@@ -46,7 +44,12 @@ export default function JsonLd() {
         alternateName: businessData.siteName,
         description: businessData.description,
         url: data.site.baseUrl,
-        logo: data.site.baseUrl + data.site.logo,
+        logo: {
+            '@type': 'ImageObject',
+            url: data.site.baseUrl + data.site.logo,
+            width: 512,
+            height: 512,
+        },
         sameAs: [businessData.phone, businessData.whatsapp].filter(Boolean),
         contactPoint: [
             {
@@ -75,7 +78,12 @@ export default function JsonLd() {
         description: businessData.description,
         url: data.site.baseUrl,
         image: [data.site.baseUrl + data.site.ogImage],
-        logo: data.site.baseUrl + data.site.logo,
+        logo: {
+            '@type': 'ImageObject',
+            url: data.site.baseUrl + data.site.logo,
+            width: 512,
+            height: 512,
+        },
         telephone: businessData.telephone,
         priceRange: '$',
         parentOrganization: {
