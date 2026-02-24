@@ -72,8 +72,8 @@ export default function JsonLd() {
     const localBusiness = {
         '@context': 'https://schema.org',
         '@type': 'PrintingService',
-        name: businessData.siteName,
-        alternateName: businessData.name,
+        name: businessData.name,
+        alternateName: businessData.siteName,
         description: businessData.description,
         url: data.site.baseUrl,
         image: [data.site.baseUrl + data.site.ogImage],
