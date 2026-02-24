@@ -42,7 +42,6 @@ export default function JsonLd() {
         '@id': `${data.site.baseUrl}#organization`,
         name: businessData.siteName,
         alternateName: businessData.name,
-        siteName: businessData.siteName,
         description: businessData.description,
         url: data.site.baseUrl,
         logo: data.site.baseUrl + data.site.logo,
@@ -72,7 +71,7 @@ export default function JsonLd() {
 
     const localBusiness = {
         '@context': 'https://schema.org',
-        '@type': 'PrintingService',
+        '@type': 'LocalBusiness',
         '@id': `${data.site.baseUrl}#localBusiness`,
         name: businessData.name,
         alternateName: businessData.siteName,
@@ -113,7 +112,6 @@ export default function JsonLd() {
         url: data.site.baseUrl,
         name: businessData.siteName,
         alternateName: businessData.name,
-        siteName: businessData.siteName,
         potentialAction: {
             '@type': 'SearchAction',
             target: `${data.site.baseUrl}/?s={search_term_string}`,
@@ -140,7 +138,6 @@ export default function JsonLd() {
         '@id': `${data.site.baseUrl}#webpage`,
         url: data.site.baseUrl,
         name: businessData.fullName,
-        siteName: businessData.siteName,
         description: businessData.description,
         image: [data.site.baseUrl + data.site.ogImage],
     };
