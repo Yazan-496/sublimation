@@ -27,7 +27,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
     title: {
-        default: businessData.name,
+        default: businessData.siteName,
         template: `%s | ${businessData.siteName}`,
     },
     applicationName: businessData.siteName,
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         canonical: '/',
     },
     openGraph: {
-        title: businessData.name,
+        title: businessData.siteName,
         description: businessData.description,
         url: data.site.baseUrl,
         siteName: businessData.siteName,
@@ -49,13 +49,13 @@ export const metadata: Metadata = {
                 url: data.site.ogImage,
                 width: 1200,
                 height: 630,
-                alt: businessData.name,
+                alt: businessData.siteName,
             },
         ],
     },
     twitter: {
         card: 'summary_large_image',
-        title: businessData.name,
+        title: businessData.siteName,
         description: businessData.description,
         site: businessData.siteName,
         images: [data.site.ogImage],

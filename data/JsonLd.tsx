@@ -37,7 +37,8 @@ export default function JsonLd() {
     const org = {
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        name: businessData.name,
+        name: businessData.siteName,
+        alternateName: businessData.name,
         siteName: businessData.siteName,
         description: businessData.description,
         url: data.site.baseUrl,
@@ -66,11 +67,47 @@ export default function JsonLd() {
         },
     };
 
+    const localBusiness = {
+        '@context': 'https://schema.org',
+        '@type': 'PrintingService',
+        name: businessData.siteName,
+        alternateName: businessData.name,
+        description: businessData.description,
+        url: data.site.baseUrl,
+        image: [data.site.baseUrl + data.site.ogImage],
+        logo: data.site.baseUrl + data.site.ogImage,
+        telephone: businessData.telephone,
+        contactPoint: [
+            {
+                '@type': 'ContactPoint',
+                telephone: businessData.telephone,
+                contactType: 'customer service',
+                areaServed: 'SA',
+                availableLanguage: ['Arabic', 'English'],
+            },
+        ],
+        address: {
+            '@type': 'PostalAddress',
+            streetAddress: businessData.location,
+            addressLocality: 'الرياض',
+            addressCountry: 'SA',
+            postalCode: '12692',
+        },
+        geo: {
+            '@type': 'GeoCoordinates',
+            latitude: businessData.geo.lat,
+            longitude: businessData.geo.lng,
+        },
+        hasMap: businessData.googleMapsUrl,
+        sameAs: [data.site.social.twitter, data.site.social.instagram].filter(Boolean),
+    };
+
     const website = {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
         url: data.site.baseUrl,
-        name: businessData.name,
+        name: businessData.siteName,
+        alternateName: businessData.name,
         siteName: businessData.siteName,
         potentialAction: {
             '@type': 'SearchAction',
@@ -101,7 +138,7 @@ export default function JsonLd() {
         image: [data.site.baseUrl + data.site.ogImage],
     };
 
-    const schema = [org, website, contactPage, webPage];
+    const schema = [org, localBusiness, website, contactPage, webPage];
 
     return (
         <Script
