@@ -1,6 +1,7 @@
 import Script from 'next/script';
 import data from '@/data';
 
+const mapId = 'a3NvHM2v1nBf1Qjj9'; // uEYHSwfFSkKRtcS2A
 export const businessData = {
     name: 'مطبعة لازورد',
     fullName: 'مطبعة لازورد - أفضل خدمات طباعة في الرياض',
@@ -10,10 +11,10 @@ export const businessData = {
     telephone: '+966572371578',
     location: 'المملكة العربية السعودية - الرياض - حي المنصورة - شارع الفرزدق',
     geo: {
-        lat: 24.615396,
-        lng: 46.738384,
+        lat: 24.61574870574911,
+        lng: 46.73759422944415,
     },
-    googleMapsUrl: 'https://goo.gl/maps/uEYHSwfFSkKRtcS2A?g_st=aw',
+    googleMapsUrl: `https://maps.app.goo.gl/${mapId}`, // https://maps.app.goo.gl/a3NvHM2v1nBf1Qjj9
     reviews: [
         {
             id: 1,
