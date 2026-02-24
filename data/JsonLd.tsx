@@ -1,5 +1,7 @@
 import Script from 'next/script';
 import data from '@/data';
+import { log } from 'console';
+import { url } from 'inspector';
 
 const mapId = 'a3NvHM2v1nBf1Qjj9'; // uEYHSwfFSkKRtcS2A
 export const businessData = {
@@ -125,6 +127,7 @@ export default function JsonLd() {
         url: data.site.baseUrl,
         name: businessData.siteName,
         alternateName: businessData.siteName,
+        logo: data.site.baseUrl + data.site.logo,
     };
 
     const contactPage = {
@@ -157,6 +160,8 @@ export default function JsonLd() {
         headline: businessData.fullName,
         description: businessData.description,
         image: [data.site.baseUrl + data.site.ogImage],
+        logo: data.site.baseUrl + data.site.logo,
+        url: data.site.baseUrl + data.site.logo,
         datePublished: new Date().toISOString(),
         dateModified: new Date().toISOString(),
         author: {
@@ -209,7 +214,7 @@ export default function JsonLd() {
 
     const schema = {
         '@context': 'https://schema.org',
-        '@graph': [org, localBusiness, website, contactPage, webPage, article, breadcrumb],
+        '@graph': [localBusiness, website, contactPage, webPage, article, breadcrumb],
     };
 
     return (

@@ -27,8 +27,8 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
     title: {
-        default: businessData.fullName,
-        template: `%s | ${businessData.name}`,
+        default: businessData.siteName,
+        template: `%s | ${businessData.fullName}`,
     },
     applicationName: businessData.siteName,
     description: businessData.description,
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: businessData.siteName,
+        title: businessData.fullName,
         description: businessData.description,
         site: businessData.siteName,
         images: [data.site.ogImage],
