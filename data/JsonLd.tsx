@@ -106,8 +106,8 @@ export default function JsonLd() {
         '@type': 'WebSite',
         '@id': `${data.site.baseUrl}#webSite`,
         url: data.site.baseUrl,
-        name: businessData.siteName,
-        alternateName: businessData.name,
+        name: businessData.name,
+        alternateName: businessData.siteName,
     };
 
     const contactPage = {
