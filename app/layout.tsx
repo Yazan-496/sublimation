@@ -27,18 +27,18 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
     title: {
-        default: businessData.siteName,
-        template: `%s | ${businessData.siteName}`,
+        default: businessData.fullName,
+        template: `%s | ${businessData.name}`,
     },
     applicationName: businessData.siteName,
     description: businessData.description,
     keywords: data.site.keywords,
     metadataBase: new URL(data.site.baseUrl),
     alternates: {
-        canonical: '/',
+        canonical: data.site.baseUrl,
     },
     openGraph: {
-        title: businessData.siteName,
+        title: businessData.fullName,
         description: businessData.description,
         url: data.site.baseUrl,
         siteName: businessData.siteName,

@@ -40,7 +40,7 @@ export default function JsonLd() {
         '@context': 'https://schema.org',
         '@type': 'Organization',
         '@id': `${data.site.baseUrl}#organization`,
-        name: businessData.name,
+        name: businessData.siteName,
         alternateName: businessData.siteName,
         description: businessData.description,
         url: data.site.baseUrl,
@@ -106,7 +106,7 @@ export default function JsonLd() {
         '@type': 'WebSite',
         '@id': `${data.site.baseUrl}#webSite`,
         url: data.site.baseUrl,
-        name: businessData.name,
+        name: businessData.siteName,
         alternateName: businessData.siteName,
     };
 
@@ -114,8 +114,8 @@ export default function JsonLd() {
         '@context': 'https://schema.org',
         '@type': 'ContactPage',
         '@id': `${data.site.baseUrl}#contactPage`,
-        url: `${data.site.baseUrl}/#contact-us`,
-        name: `اتصل بنا - ${businessData.name}`,
+        url: `${data.site.baseUrl}/contact-us`,
+        name: `اتصل بنا - ${businessData.siteName}`,
         mainEntity: {
             '@type': 'ContactPoint',
             telephone: businessData.telephone,

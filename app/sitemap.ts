@@ -11,19 +11,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 1,
         },
         {
-            url: `${baseUrl}/#printing-service`,
+            url: `${baseUrl}/printing-service`,
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.8,
         },
         {
-            url: `${baseUrl}/#all-services`,
+            url: `${baseUrl}/all-services`,
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.8,
         },
         {
-            url: `${baseUrl}/#contact-us`,
+            url: `${baseUrl}/contact-us`,
+            lastModified: new Date(),
+            changeFrequency: 'yearly',
+            priority: 0.5,
+        },
+        {
+            url: `${baseUrl}/whatsapp`,
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.5,
