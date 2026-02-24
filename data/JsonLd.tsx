@@ -45,7 +45,7 @@ export default function JsonLd() {
         description: businessData.description,
         url: data.site.baseUrl,
         logo: data.site.baseUrl + data.site.logo,
-        sameAs: [data.site.social.twitter, data.site.social.instagram].filter(Boolean),
+        sameAs: [businessData.phone, businessData.whatsapp].filter(Boolean),
         contactPoint: [
             {
                 '@type': 'ContactPoint',
