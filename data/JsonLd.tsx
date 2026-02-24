@@ -127,7 +127,9 @@ export default function JsonLd() {
         url: data.site.baseUrl,
         name: businessData.siteName,
         alternateName: businessData.siteName,
-        logo: data.site.baseUrl + data.site.logo,
+        publisher: {
+            '@id': `${data.site.baseUrl}#organization`,
+        },
     };
 
     const contactPage = {
@@ -213,7 +215,7 @@ export default function JsonLd() {
 
     const schema = {
         '@context': 'https://schema.org',
-        '@graph': [localBusiness, website, contactPage, webPage, article, breadcrumb],
+        '@graph': [org, localBusiness, website, contactPage, webPage, article, breadcrumb],
     };
 
     return (
