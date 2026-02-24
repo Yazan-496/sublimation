@@ -62,11 +62,6 @@ export default function JsonLd() {
             addressCountry: 'SA',
             postalCode: '12692',
         },
-        geo: {
-            '@type': 'GeoCoordinates',
-            latitude: businessData.geo.lat,
-            longitude: businessData.geo.lng,
-        },
     };
 
     const localBusiness = {
