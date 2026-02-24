@@ -29,9 +29,9 @@ export default function Header() {
                                     />
                                 </div>
                             ) : (
-                                <span className="text-xl font-bold whitespace-nowrap text-gray-900 dark:text-white">
+                                <h1 className="text-xl font-bold whitespace-nowrap text-gray-900 dark:text-white">
                                     {header.title}
-                                </span>
+                                </h1>
                             )}
                         </Link>
                     </div>

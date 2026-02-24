@@ -1,7 +1,7 @@
 import data from '@/data';
 
 export default function Footer() {
-    const { footer } = data;
+    const { footer, site } = data;
 
     return (
         <footer className="bg-gradient-to-tr from-[#f3f4f6] via-[#ffffff] to-[#fafafa] dark:from-[#0b0b0b] dark:via-[#22272b] dark:to-[#3a3f44] text-gray-900 dark:text-white rounded-t-xl shadow-xl border-t border-transparent">
@@ -24,6 +24,10 @@ export default function Footer() {
                         ))}
                     </div>
                 </div>
+
+                <h1 className="text-gray-700 dark:text-white/90 text-sm w-full text-center mt-6">
+                    {site.alternateName}
+                </h1>
                 <div className="mt-8 border-t border-gray-200 dark:border-white/20 pt-8 text-center">
                     <p className="text-sm text-gray-600 dark:text-white/80">{footer.copyright}</p>
                     <div className="mt-4 hover:bg-gray-50 dark:hover:bg-white/10 inline-flex items-center gap-2 px-3 py-1 rounded-full transition-all shadow-sm">
