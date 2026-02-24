@@ -140,7 +140,7 @@ export default function JsonLd() {
         image: [data.site.baseUrl + data.site.ogImage],
     };
 
-    const schema = [org, localBusiness, website, contactPage, webPage];
+    const schema = [localBusiness, website, contactPage, webPage, org];
 
     return (
         <Script
