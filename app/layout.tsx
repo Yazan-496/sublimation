@@ -27,8 +27,8 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
     title: {
-        default: businessData.siteName,
-        template: `%s | ${businessData.fullName}`,
+        default: businessData.fullName,
+        template: `%s | ${businessData.name}`,
     },
     applicationName: businessData.siteName,
     description: businessData.description,
