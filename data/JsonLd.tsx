@@ -107,11 +107,6 @@ export default function JsonLd() {
         url: data.site.baseUrl,
         name: businessData.siteName,
         alternateName: businessData.name,
-        potentialAction: {
-            '@type': 'SearchAction',
-            target: `${data.site.baseUrl}/?s={search_term_string}`,
-            'query-input': 'required name=search_term_string',
-        },
     };
 
     const contactPage = {
