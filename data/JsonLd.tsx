@@ -42,7 +42,7 @@ export default function JsonLd() {
         siteName: businessData.siteName,
         description: businessData.description,
         url: data.site.baseUrl,
-        logo: data.site.baseUrl + data.site.ogImage,
+        logo: data.site.baseUrl + data.site.logo,
         sameAs: [data.site.social.twitter, data.site.social.instagram].filter(Boolean),
         contactPoint: [
             {
@@ -75,7 +75,7 @@ export default function JsonLd() {
         description: businessData.description,
         url: data.site.baseUrl,
         image: [data.site.baseUrl + data.site.ogImage],
-        logo: data.site.baseUrl + data.site.ogImage,
+        logo: data.site.baseUrl + data.site.logo,
         telephone: businessData.telephone,
         contactPoint: [
             {
