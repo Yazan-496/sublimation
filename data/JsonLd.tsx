@@ -75,6 +75,7 @@ export default function JsonLd() {
         image: [data.site.baseUrl + data.site.ogImage],
         logo: data.site.baseUrl + data.site.logo,
         telephone: businessData.telephone,
+        priceRange: '$',
         contactPoint: [
             {
                 '@type': 'ContactPoint',
@@ -103,7 +104,7 @@ export default function JsonLd() {
     const website = {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
-        '@id': `${data.site.baseUrl}#website`,
+        '@id': `${data.site.baseUrl}#webSite`,
         url: data.site.baseUrl,
         name: businessData.siteName,
         alternateName: businessData.name,
@@ -125,7 +126,7 @@ export default function JsonLd() {
     const webPage = {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        '@id': `${data.site.baseUrl}#webpage`,
+        '@id': `${data.site.baseUrl}#webPage`,
         url: data.site.baseUrl,
         name: businessData.fullName,
         description: businessData.description,
