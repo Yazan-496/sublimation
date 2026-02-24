@@ -39,6 +39,7 @@ export default function JsonLd() {
     const org = {
         '@context': 'https://schema.org',
         '@type': 'Organization',
+        '@id': `${data.site.baseUrl}#organization`,
         name: businessData.siteName,
         alternateName: businessData.name,
         siteName: businessData.siteName,
@@ -72,6 +73,7 @@ export default function JsonLd() {
     const localBusiness = {
         '@context': 'https://schema.org',
         '@type': 'PrintingService',
+        '@id': `${data.site.baseUrl}#localBusiness`,
         name: businessData.name,
         alternateName: businessData.siteName,
         description: businessData.description,
@@ -107,6 +109,7 @@ export default function JsonLd() {
     const website = {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
+        '@id': `${data.site.baseUrl}#website`,
         url: data.site.baseUrl,
         name: businessData.siteName,
         alternateName: businessData.name,
@@ -121,6 +124,7 @@ export default function JsonLd() {
     const contactPage = {
         '@context': 'https://schema.org',
         '@type': 'ContactPage',
+        '@id': `${data.site.baseUrl}#contactPage`,
         url: `${data.site.baseUrl}/#contact-us`,
         name: `اتصل بنا - ${businessData.name}`,
         mainEntity: {
@@ -133,6 +137,7 @@ export default function JsonLd() {
     const webPage = {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
+        '@id': `${data.site.baseUrl}#webpage`,
         url: data.site.baseUrl,
         name: businessData.fullName,
         siteName: businessData.siteName,
@@ -140,7 +145,10 @@ export default function JsonLd() {
         image: [data.site.baseUrl + data.site.ogImage],
     };
 
-    const schema = [localBusiness, website, contactPage, webPage, org];
+    const schema = {
+        '@context': 'https://schema.org',
+        '@graph': [org, localBusiness, website, contactPage, webPage],
+    };
 
     return (
         <Script
