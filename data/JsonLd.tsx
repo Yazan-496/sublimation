@@ -82,7 +82,7 @@ export default function JsonLd() {
     const contactPage = {
         '@context': 'https://schema.org',
         '@type': 'ContactPage',
-        url: `${data.site.baseUrl}/#contact`,
+        url: `${data.site.baseUrl}/#contact-us`,
         name: `اتصل بنا - ${businessData.name}`,
         mainEntity: {
             '@type': 'ContactPoint',

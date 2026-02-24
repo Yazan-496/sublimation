@@ -3,8 +3,8 @@
   "title": "مطبعة لازورد",
   "nav": [
     { "label": "الرئيسية", "href": "#hero" },
-    { "label": "خدمات الطباعة", "href": "#services" },
-    { "label": "معرض الأعمال", "href": "#portfolio" },
-    { "label": "اتصل بنا", "href": "#contact" }
+    { "label": "خدمات الطباعة", "href": "#printing-service" },
+    { "label": "معرض الأعمال", "href": "#all-services" },
+    { "label": "اتصل بنا", "href": "#contact-us" }
   ]
 }
