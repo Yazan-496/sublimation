@@ -160,7 +160,6 @@ export default function JsonLd() {
         headline: businessData.fullName,
         description: businessData.description,
         image: [data.site.baseUrl + data.site.ogImage],
-        logo: data.site.baseUrl + data.site.logo,
         url: data.site.baseUrl + data.site.logo,
         datePublished: new Date().toISOString(),
         dateModified: new Date().toISOString(),
