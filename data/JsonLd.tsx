@@ -33,7 +33,9 @@ export const businessData = {
     ],
 };
 
-export const mapEmbedUrl = `https://maps.google.com/maps?q=${businessData.geo.lat},${businessData.geo.lng}&z=15&output=embed`;
+export const mapEmbedUrl =
+    businessData.googleMapsUrl ||
+    `https://maps.google.com/maps?q=${businessData.geo.lat},${businessData.geo.lng}&z=15&output=embed`;
 
 export default function JsonLd() {
     const org = {
