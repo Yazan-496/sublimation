@@ -1,7 +1,7 @@
 import Script from 'next/script';
 import data from '@/data';
 
-const mapId = 'a3NvHM2v1nBf1Qjj9'; // uEYHSwfFSkKRtcS2A
+const mapId = 'HUmhD2GK1GET1Bc77'; // uEYHSwfFSkKRtcS2A
 export const businessData = {
     name: 'مطبعة لازورد',
     fullName: 'مطبعة لازورد - أفضل خدمات طباعة في الرياض',
@@ -33,7 +33,7 @@ export const businessData = {
     ],
 };
 const staticMapUrl =
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1813.6164481622673!2d46.73757076011887!3d24.61565665406608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f053528df86d1%3A0xd7190636b7f199fb!2z2YXYt9io2LnYqSDZhNin2LLZiNix2K8!5e0!3m2!1sen!2snl!4v1772034428382!5m2!1sen!2snl';
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3627.229726021553!2d46.734983776041574!3d24.615765955004058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f05b525e373cb%3A0x98cac7404e28a9be!2z2YXYt9in2KjYuSDZhNin2LLZiNix2K8!5e0!3m2!1sen!2sjp!4v1772056889537!5m2!1sen!2sjp';
 
 export const mapEmbedUrl =
     staticMapUrl ||
