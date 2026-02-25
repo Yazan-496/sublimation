@@ -35,7 +35,11 @@ export default function Services() {
                                 <div className="h-78 w-full relative overflow-hidden bg-gray-200 dark:bg-zinc-800">
                                     <ImagePreview
                                         src={service.image}
-                                        alt={''}
+                                        alt={
+                                            service.title ||
+                                            service.description ||
+                                            `Service Image ${index + 1}`
+                                        }
                                         fill
                                         className="object-cover h-full"
                                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"

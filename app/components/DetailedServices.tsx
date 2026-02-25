@@ -36,7 +36,9 @@ export default function DetailedServices() {
                                             <div className="relative h-78 w-full">
                                                 <ImagePreview
                                                     src={image.src || ''}
-                                                    alt={''}
+                                                    alt={
+                                                        image.alt || `Service Image ${imgIndex + 1}`
+                                                    }
                                                     fill
                                                     className="object-cover"
                                                 />
