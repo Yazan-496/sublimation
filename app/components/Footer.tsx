@@ -24,10 +24,6 @@ export default function Footer() {
                         ))}
                     </div>
                 </div>
-
-                <h1 className="text-gray-700 dark:text-white/90 text-sm w-full text-center mt-6">
-                    {site.alternateName}
-                </h1>
                 <div className="mt-8 border-t border-gray-200 dark:border-white/20 pt-8 text-center">
                     <p className="text-sm text-gray-600 dark:text-white/80">{footer.copyright}</p>
                     <div className="mt-4 hover:bg-gray-50 dark:hover:bg-white/10 inline-flex items-center gap-2 px-3 py-1 rounded-full transition-all shadow-sm">
