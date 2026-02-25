@@ -32,9 +32,11 @@ export const businessData = {
         },
     ],
 };
+const staticMapUrl =
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1813.6164481622673!2d46.73757076011887!3d24.61565665406608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f053528df86d1%3A0xd7190636b7f199fb!2z2YXYt9io2LnYqSDZhNin2LLZiNix2K8!5e0!3m2!1sen!2snl!4v1772034428382!5m2!1sen!2snl';
 
 export const mapEmbedUrl =
-    businessData.googleMapsUrl ||
+    staticMapUrl ||
     `https://maps.google.com/maps?q=${businessData.geo.lat},${businessData.geo.lng}&z=15&output=embed`;
 
 export default function JsonLd() {
